@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: cmake --build build
 
-    - name: Run Tests
+    - name: Run Test Cases
       run: ctest --test-dir build
 
  
