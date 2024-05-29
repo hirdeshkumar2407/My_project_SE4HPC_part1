@@ -19,7 +19,7 @@ cd your-repo-name
 2. **Enable Google Test**
 ```sh
 git submodule init
-git submodule test
+git submodule update
 ```
    
 3. **Build the project:**
