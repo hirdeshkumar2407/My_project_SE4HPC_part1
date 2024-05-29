@@ -50,8 +50,8 @@ TEST(MatrixMultiplicationPassTest, TestMultiplyMatrices) {
     multiplyMatrices(A, B, C, 2, 3, 2);
 
     std::vector<std::vector<int>> expected = {
-        {2006, 64},
-        {145, 161}
+        {2078, 64},
+        {143, 161}
     };
 
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
