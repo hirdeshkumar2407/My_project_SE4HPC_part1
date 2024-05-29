@@ -11,7 +11,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
-        submodules: true  # Initialize and update submodules
+        submodules: recursive  # Initialize and update submodules
 
     - name: Setup CMake
       uses: jwlawson/actions-setup-cmake@v1
@@ -26,5 +26,5 @@ jobs:
       run: cmake --build build
 
     - name: Run Test Cases
-      run: ctest --output-on-failure
+      run: ctest -VV
       working-directory: build
