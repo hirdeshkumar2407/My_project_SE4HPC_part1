@@ -37,7 +37,7 @@ rm -rf *
 3. **Test (in the build folder):**
 
 ```sh
-ctest
+ctest -VV
 ```
 or:
 ```sh
