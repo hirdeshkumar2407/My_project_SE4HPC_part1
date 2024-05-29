@@ -1,8 +1,9 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <../include/matrix_multiplication.h>
 
-void multiplyMatricesWithoutErrors(const std::vector<std::vector<int>> &A,
+void multiplyMatrices(const std::vector<std::vector<int>> &A,
                       const std::vector<std::vector<int>> &B,
                       std::vector<std::vector<int>> &C, int rowsA, int colsA,
                       int colsB) {
