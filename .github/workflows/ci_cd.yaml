@@ -22,5 +22,4 @@ jobs:
     - name: Run Tests
       run: ctest --test-dir build
 
-    - name: Run the binary
-      run: ./test_multiplication
+ 
