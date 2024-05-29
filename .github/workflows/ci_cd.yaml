@@ -8,18 +8,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2c
 
-    - name: Setup CMake
+    - name: Setup CMmake
       uses: jwlawson/actions-setup-cmake@v1
 
+    - name: Create a build directory
+      run: |
+        mkdir build
+        cd build
+
     - name: Configure CMake
-      run: cmake -S . -B build
+      run: cmake ..
 
     - name: Build
-      run: cmake --build build
+      run: cmake --build .
 
     - name: Run Test Cases
-      run: ctest --test-dir build
+      run: ctest
 
  
