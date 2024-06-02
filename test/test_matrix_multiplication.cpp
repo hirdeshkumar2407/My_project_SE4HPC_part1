@@ -418,7 +418,7 @@ TEST(MatrixMultiplication6, TestMultiplyMatricesNegativeResult2x2) {
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
 
-TEST(MatrixMultiplication6, TestMultiplyMatricesNegativeResult2x2) {
+TEST(MatrixMultiplication6, TestMultiplyMatricesPosResult2x2) {
 
 
     std::vector<std::vector<int>> A = {
