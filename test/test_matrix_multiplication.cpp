@@ -358,8 +358,95 @@ TEST(MatrixMultiplication6, TestMultiplyMatricesPostiveAnswer2x1and1x1) {
 6: [----------] 1 test from MatrixMultiplication6 (0 ms total) */
 }
 
+TEST(MatrixMultiplication6, TestMultiplyMatricesSquareMatrixWithNeg) {
 
 
+    std::vector<std::vector<int>> A = {
+        {3, -4},
+        {3, -4}
+    };
+    std::vector<std::vector<int>> B = {
+        {1, 3},
+        {3, 1}
+      
+    };
+
+    int rowsA = A.size();
+    int colsA = A[0].size();
+    int colsB = B[0].size();
+
+    std::vector<std::vector<int>> C(rowsA, std::vector<int>(colsB, 0));
+
+    multiplyMatrices(A, B, C, rowsA, colsA, colsB);
+
+    std::vector<std::vector<int>> expected = {
+        {-9, 5},
+        {-9, 5}
+        
+    };
+
+    ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
+}
+
+TEST(MatrixMultiplication6, TestMultiplyMatricesNegativeResult2x2) {
+
+
+    std::vector<std::vector<int>> A = {
+        {1, 1},
+        {2, -1}
+    };
+    std::vector<std::vector<int>> B = {
+        {0, 1},
+        {1, 0}
+      
+    };
+
+    int rowsA = A.size();
+    int colsA = A[0].size();
+    int colsB = B[0].size();
+
+    std::vector<std::vector<int>> C(rowsA, std::vector<int>(colsB, 0));
+
+    multiplyMatrices(A, B, C, rowsA, colsA, colsB);
+
+    std::vector<std::vector<int>> expected = {
+        {1, 0},
+        {1, -1}
+        
+    };
+
+    ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
+}
+
+TEST(MatrixMultiplication6, TestMultiplyMatricesNegativeResult2x2) {
+
+
+    std::vector<std::vector<int>> A = {
+        {5, 5},
+        {1, 3}
+    };
+    std::vector<std::vector<int>> B = {
+        {1, 2},
+        {2, 5}
+      
+    };
+
+    int rowsA = A.size();
+    int colsA = A[0].size();
+    int colsB = B[0].size();
+
+    std::vector<std::vector<int>> C(rowsA, std::vector<int>(colsB, 0));
+
+    multiplyMatrices(A, B, C, rowsA, colsA, colsB);
+
+    std::vector<std::vector<int>> expected = {
+        {15, 35},
+        {7, 17}
+        
+    };
+
+    ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
+}
 
 
 
