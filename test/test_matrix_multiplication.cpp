@@ -385,6 +385,22 @@ TEST(MatrixMultiplication6, TestMultiplyMatricesSquareMatrixWithNeg) {
         
     };
 
+    /*
+        Error 3: Matrix A contains a negative number!
+        Error 4: Matrix B contains the number 3!
+        Error 4: Matrix B contains the number 3!
+        Error 3: Matrix A contains a negative number!
+        Error 7: Result matrix contains a number between 11 and 20!
+        Error 3: Matrix A contains a negative number!
+        Error 4: Matrix B contains the number 3!
+        Error 4: Matrix B contains the number 3!
+        Error 3: Matrix A contains a negative number!
+        Error 7: Result matrix contains a number between 11 and 20!
+        Error 12: The number of rows in A is equal to the number of columns in B!
+        Error 14: The result matrix C has an even number of rows!
+        Error 18: Matrix A is a square matrix!
+    */
+
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
 
@@ -415,6 +431,18 @@ TEST(MatrixMultiplication6, TestMultiplyMatricesNegativeResult2x2) {
         
     };
 
+    /*
+        Error 1: Element-wise multiplication of ones detected!
+        Error 1: Element-wise multiplication of ones detected!
+        Error 3: Matrix A contains a negative number!
+        Error 3: Matrix A contains a negative number!
+        Error 10: A row in matrix A contains more than one '1'!
+        Error 11: Every row in matrix B contains at least one '0'!
+        Error 12: The number of rows in A is equal to the number of columns in B!
+        Error 14: The result matrix C has an even number of rows!
+        Error 18: Matrix A is a square matrix!
+    */
+
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
 
@@ -444,6 +472,17 @@ TEST(MatrixMultiplication6, TestMultiplyMatricesPosResult2x2) {
         {7, 17}
         
     };
+
+    /*
+        Error 7: Result matrix contains a number between 11 and 20!
+        Error 1: Element-wise multiplication of ones detected!
+        Error 7: Result matrix contains a number between 11 and 20!
+        Error 7: Result matrix contains a number between 11 and 20!
+        Error 12: The number of rows in A is equal to the number of columns in B!
+        Error 14: The result matrix C has an even number of rows!
+        Error 15: A row in matrix A is filled entirely with 5s!
+        Error 18: Matrix A is a square matrix!
+    */
 
     ASSERT_EQ(C, expected) << "Matrix multiplication test failed! :(((()";
 }
